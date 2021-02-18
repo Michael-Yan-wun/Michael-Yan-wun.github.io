@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>M.M.C</title>
+        <link rel="stylesheet" href="./calculator.css" />
+        <link rel="icon" href="./image/calculator.png" type="image/x-icon" / >
+    </head>
+    <body>
+        <!-- 簡介 -->
+        <p> <span>M</span>ichael's <span>M</span>agic <span>C</span>alculator</p>
+        <span id="followText"><h4>Click the following button to follow me!!</h4></span>
+        <!-- 照片 -->
+        <div id="myself" class="button myself"></div>
+        <!-- 文字區塊 -->
+        <div id="follow" class="button follow"></div>
+        <!-- icon區塊 -->
+        <div id="github" class="button github"></div>
+        <div id="gitbook" class="button gitbook"></div>
+        <div id="facebook" class="button facebook"></div>
+        <div id="instagram" class="button instagram"></div>
+        
+        <div class="calculator">
+            <!-- 小icon顯示區 -->
+            <div class="top-container">
+                <!-- time -->
+                <div class="clock">
+                    <span class="hour">9</span>:<span class="minute">23</span>
+                </div>
+                <!-- wifi-icon -->
+                <div class="status">
+                    <img src="./image/status.png" alt="status" />
+                </div>
+            </div>
+            <!-- 數字顯示區 -->
+            <div class="screenShow" id="screenShow">0</div>
+            <!-- 按鈕區域 -->
+            <div class="buttons-container">
+                <div id="ac" class="button function ac">AC</div>
+                <div class="button function pm">+/-</div>
+                <div class="button function percent">%</div>
+                <div id="division" class="button operator division">÷</div>
+                <div class="button number-7">7</div>
+                <div class="button number-8">8</div>
+                <div class="button number-9">9</div>
+                <div id="multiplication" class="button operator multiplication">×</div>
+                <div class="button number-4">4</div>
+                <div class="button number-5">5</div>
+                <div class="button number-6">6</div>
+                <div id="minus" class="button operator minus">-</div>
+                <div class="button number-1">1</div>
+                <div class="button number-2">2</div>
+                <div class="button number-3">3</div>
+                <div id="plus" class="button operator plus">+</div>
+                <div class="button number-0">0</div>
+                <div class="button decimal">.</div>
+                <div class="button operator equal">=</div>
+            </div>
+            <!-- 底部 -->
+            <div class="bottom"></div>
+        </div>
+        <script src="./calculator.js"></script>
+    </body>
+</html>

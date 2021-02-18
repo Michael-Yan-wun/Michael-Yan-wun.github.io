@@ -1,0 +1,375 @@
+/* 每個元素都是boder-box的樣式 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* 不能匡裡面的元素 */
+    user-select: none;
+}
+
+body {
+    margin: 25px;
+    font-family: "Helvetica", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(170, 193, 199);
+}
+
+p {
+    position: inherit;
+    margin-bottom: 250px;
+    font-size: 130px;
+    font-family: cursive;
+}
+
+span {
+    color: white;
+    font-weight: 300;
+}
+
+h4 {
+    width: 18em;
+    border-right: 0.05em solid;
+    overflow: hidden;
+    /* visibility: hidden; */
+    white-space: nowrap;
+    /* typing打字機效果，blink-caret游標閃爍 */
+    animation: typing 6s steps(30, end), blink-caret 1s step-end infinite;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 18em;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: currentColor;
+    }
+}
+
+#followText {
+    font-size: 17px;
+    font-weight: 300;
+    color: black;
+    font-family: cursive;
+    position: absolute;
+    bottom: 150px;
+    left: 175px;
+    z-index: 1;
+    animation-name: followText;
+    animation-duration: 4s;
+}
+@keyframes followText {
+    from {
+        transform: rotate3d(1, 0, 0, 0deg) translate3d(-500px, 0px, 0px);
+    }
+    to {
+        transform: rotate3d(1, 0, 0, 0deg) translate3d(0px, 0px, 0px);
+    }
+}
+
+/* follow css */
+.button.follow {
+    background-color: wheat;
+    border-radius: 10px 10px 10px 20px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 120px;
+    left: 160px;
+    width: 330px;
+    height: 70px;
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 85%,
+        51% 85%,
+        50% 85%,
+        21% 85%,
+        0 85%
+    );
+    z-index: 0;
+    animation-name: follow;
+    animation-duration: 4s;
+}
+.button.follow:active {
+    filter: none;
+}
+
+@keyframes follow {
+    from {
+        transform: rotate3d(1, 0, 0, 0deg) translate3d(-500px, 0px, 0px);
+    }
+    to {
+        transform: rotate3d(1, 0, 0, 0deg) translate3d(0px, 0px, 0px);
+    }
+}
+
+/* icon css */
+/* github */
+.button.github {
+    background-image: url("./image/github.jpg");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0px;
+    left: 200px;
+    width: 70px;
+    height: 70px;
+    /* 動畫 */
+    animation-name: github;
+    animation-duration: 5s;
+}
+@keyframes github {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 200px;
+    }
+}
+
+.button.github:hover {
+    bottom: 10px;
+    width: 70px;
+    box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999,
+        0 0 30px 0px rgba(0, 0, 0, 0.7);
+}
+/* gitbook */
+.button.gitbook {
+    background-image: url("./image/gitbook.png");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0px;
+    left: 320px;
+    width: 70px;
+    height: 70px;
+    /* 動畫 */
+    animation-name: gitbook;
+    animation-duration: 5s;
+}
+@keyframes gitbook {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 320px;
+    }
+}
+
+.button.gitbook:hover {
+    bottom: 10px;
+    width: 70px;
+    box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999,
+        0 0 30px 0px rgba(0, 0, 0, 0.7);
+}
+
+/* facebook */
+.button.facebook {
+    background-image: url("./image/facebook.jpg");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0px;
+    left: 440px;
+    width: 70px;
+    height: 70px;
+    /* 動畫 */
+    animation-name: facebook;
+    animation-duration: 5s;
+}
+@keyframes facebook {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 440px;
+    }
+}
+
+.button.facebook:hover {
+    bottom: 10px;
+    width: 70px;
+    box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999,
+        0 0 30px 0px rgba(0, 0, 0, 0.7);
+}
+
+/* instagram */
+.button.instagram {
+    background-image: url("./image/instagram.svg");
+    background-color: rgb(221, 216, 216);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    bottom: 0px;
+    left: 560px;
+    width: 70px;
+    height: 70px;
+    animation-name: instagram;
+    animation-duration: 5s;
+}
+
+@keyframes instagram {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 560px;
+    }
+}
+
+.button.instagram:hover {
+    bottom: 10px;
+    width: 70px;
+    box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999,
+        0 0 30px 0px rgba(0, 0, 0, 0.7);
+}
+
+/* myself */
+.button.myself {
+    background-image: url("./image/myself.jpeg");
+    background-color: rgb(221, 216, 216);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    bottom: 0px;
+    left: 30px;
+    width: 150px;
+    height: 150px;
+    animation-name: myself;
+    animation-duration: 5s;
+    box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999,
+        0 0 30px 0px rgba(0, 0, 0, 0.7);
+    border: 5px solid rgb(221, 216, 216);
+}
+
+@keyframes myself {
+    from {
+        transform: rotate3d(0, 0, 1, -100deg) translate3d(-300px, 0px, 0px);
+    }
+    to {
+        transform: rotate3d(0, 0, 1, 0deg) translate3d(0px, 0px, 0px);
+    }
+}
+
+.calculator {
+    /* 加入posision因為底部的一槓 */
+    position: relative;
+    background: black;
+    color: white;
+    width: 423px;
+    height: 877px;
+    border-radius: 50px;
+    padding: 15px;
+    box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999,
+        0 0 30px 0px rgba(0, 0, 0, 0.7);
+    border: 5px solid #dfccb7;
+    /* 整體縮放 */
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+
+    /* 動畫設定 */
+    animation-name: myCal;
+    animation-duration: 5s;
+}
+
+@keyframes myCal {
+    from {
+        transform: rotate3d(0, 0, 1, -100deg)
+            translate3d(-300px, -100px, -150px);
+    }
+    to {
+        transform: scale(0.9) rotate3d(0, 0, 1, 0deg) translate3d(0px, 0px, 0px);
+    }
+}
+
+.top-container {
+    display: flex;
+    padding: 0 20px;
+    /* space-between */
+    justify-content: space-between;
+    /* 顯示區距離 */
+    height: 250px;
+}
+
+.screenShow {
+    overflow: hidden;
+    font-size: 100px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    height: 110px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+/* 按鈕css */
+.buttons-container {
+    /* grid控制行與列顯示 */
+    display: grid;
+    /* fr用法： */
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    /* 每個元素之間的空格 */
+    grid-gap: 20px;
+}
+
+.button {
+    height: 75px;
+    width: 75px;
+    font-size: 40px;
+    border-radius: 50%;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 滑鼠移過去的樣式 */
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+.button.function {
+    color: black;
+    background: #a5a5a5;
+}
+
+.button.operator {
+    background: #f1a33c;
+}
+/* 數字0的ｃｓｓ */
+.button.number-0 {
+    width: 175px;
+    border-radius: 55px;
+    justify-content: flex-start;
+    padding-left: 30px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+/* 按下有active屬性並且閃亮一下 */
+.button:active {
+    filter: brightness(150%);
+}
+
+/* 手機下面一槓 */
+.bottom {
+    width: 150px;
+    height: 5px;
+    background: white;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 5px;
+    /* 因為用left會使元素從整個container的50%『開始』，所以用transform:translateX(-50%)向左移動50% */
+    left: 50%;
+    transform: translateX(-50%);
+}
